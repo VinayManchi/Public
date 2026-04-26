@@ -2,7 +2,7 @@
   "_note": "Global default policy. Applies when no model/manufacturer rule matches.",
   "enableReset": false,
   "lastUpdated": "2026-04-26",
-  "reason": "Paused for investigation of reset issues",
+  "reason": "Paused for investigation of reset issues. It will be re-enabled once the investigation is complete and any necessary fixes are deployed.",
 
   "rules": {
     "_note": "Precedence: models > manufacturers > global",
@@ -11,15 +11,15 @@
       "_note": "Case-insensitive exact match on Win32_ComputerSystem.Manufacturer",
 
       "DELL": {
-        "enableReset": true,
+        "enableReset": false,
         "reason": "Dell devices temporarily allowed during global pause"
       },
       "HP": {
-        "enableReset": true,
+        "enableReset": false,
         "reason": "HP devices temporarily allowed during global pause"
       },
       "LENOVO": {
-        "enableReset": true,
+        "enableReset": false,
         "reason": "Lenovo devices remain blocked"
       }
     },
