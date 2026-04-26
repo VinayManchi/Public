@@ -28,7 +28,7 @@
       "_note": "Case-insensitive exact match on Win32_ComputerSystem.Model",
 
       "21MDS0R20H": {
-        "enableReset": false,
+        "enableReset": true,
         "reason": "This specific model is not allowed to reset."
       }
     }
