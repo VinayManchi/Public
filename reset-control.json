@@ -1,5 +1,5 @@
 {
-  "enableReset": false,
+  "enableReset": true,
   "lastUpdated": "2026-04-26",
-  "reason": "Default disabled for device reset"
+  "reason": "Default enabled for device reset"
 }
