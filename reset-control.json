@@ -29,7 +29,7 @@
 
       "21MDS0R20H": {
         "enableReset": true,
-        "reason": "This specific model is not allowed to reset."
+        "reason": "This specific model is allowed to reset."
       }
     }
   }
