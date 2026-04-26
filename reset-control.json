@@ -1,5 +1,5 @@
 {
   "enableReset": false,
   "lastUpdated": "2026-04-26",
-  "reason": "Default disabled for device reset"
+  "reason": "Reset paused due to critical bug. It will be re-enabled once the issue is resolved."
 }
