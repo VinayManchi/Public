@@ -1,8 +1,8 @@
 {
   "_note": "Global default policy. Applies when no model/manufacturer rule matches.",
-  "enableReset": false,
+  "enableReset": true,
   "lastUpdated": "2026-04-26",
-  "reason": "Paused for investigation of reset issues. It will be re-enabled once the investigation is complete and any necessary fixes are deployed.",
+  "reason": "Reset is enabled for all devices.",
 
   "rules": {
     "_note": "Precedence: models > manufacturers > global",
@@ -11,16 +11,16 @@
       "_note": "Case-insensitive exact match on Win32_ComputerSystem.Manufacturer",
 
       "DELL": {
-        "enableReset": false,
-        "reason": "Dell devices temporarily allowed during global pause"
+        "enableReset": true,
+        "reason": "Dell devices are allowed."
       },
       "HP": {
-        "enableReset": false,
-        "reason": "HP devices temporarily allowed during global pause"
+        "enableReset": true,
+        "reason": "HP devices are allowed."
       },
       "LENOVO": {
-        "enableReset": false,
-        "reason": "Lenovo devices remain blocked"
+        "enableReset": true,
+        "reason": "Lenovo devices are allowed."
       }
     },
 
@@ -28,8 +28,8 @@
       "_note": "Case-insensitive exact match on Win32_ComputerSystem.Model",
 
       "21MDS0R20H": {
-        "enableReset": false,
-        "reason": "This specific model is explicitly allowed"
+        "enableReset": true,
+        "reason": "This specific model is allowed."
       }
     }
   }
