@@ -19,7 +19,7 @@
         "reason": "HP devices temporarily allowed during global pause"
       },
       "LENOVO": {
-        "enableReset": false,
+        "enableReset": true,
         "reason": "Lenovo devices remain blocked"
       }
     },
@@ -28,7 +28,7 @@
       "_note": "Case-insensitive exact match on Win32_ComputerSystem.Model",
 
       "21MDS0R20H": {
-        "enableReset": true,
+        "enableReset": false,
         "reason": "This specific model is explicitly allowed"
       }
     }
