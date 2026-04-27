@@ -1,6 +1,6 @@
 {
   "_note": "Global default policy. Applies when no model/manufacturer rule matches.",
-  "enableReset": false,
+  "enableReset": true,
   "lastUpdated": "2026-04-26",
   "reason": "Reset is enabled for all devices.",
 
@@ -11,15 +11,15 @@
       "_note": "Case-insensitive exact match on Win32_ComputerSystem.Manufacturer",
 
       "DELL": {
-        "enableReset": false,
+        "enableReset": true,
         "reason": "Dell devices are allowed."
       },
       "HP": {
-        "enableReset": false,
+        "enableReset": true,
         "reason": "HP devices are allowed."
       },
       "LENOVO": {
-        "enableReset": false,
+        "enableReset": true,
         "reason": "Lenovo devices are allowed."
       }
     },
@@ -28,7 +28,7 @@
       "_note": "Case-insensitive exact match on Win32_ComputerSystem.Model",
 
       "21MDS0R20H": {
-        "enableReset": false,
+        "enableReset": true,
         "reason": "This specific model is allowed to reset."
       }
     }
