@@ -59,7 +59,7 @@
     "users": {
       "_note": "Match on resolved user email (Outlook profile / UPN). Use full UPN, uppercase match.",
 
-      "mreale@grundfoswt.com": {
+      "user.name@grundfoswt.com": {
         "suppressNotification": true,
         "reason": "Example: approved late migration — no toast until removed from list."
       }
