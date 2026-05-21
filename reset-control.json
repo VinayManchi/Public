@@ -38,7 +38,7 @@
       "_note": "Case-insensitive exact match on Win32_ComputerSystem.Model",
 
       "21MDS0R20H": {
-        "enableReset": true,
+        "enableReset": false,
         "reason": "This specific model is allowed to reset."
       }
     }
@@ -59,7 +59,7 @@
     "users": {
       "_note": "Match on resolved user email (Outlook profile / UPN). Use full UPN, uppercase match.",
 
-      "user.name@grundfos.com": {
+      "user.name@grundfoswt.com": {
         "suppressNotification": true,
         "reason": "Example: approved late migration — no toast until removed from list."
       }
