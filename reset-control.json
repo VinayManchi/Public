@@ -1,11 +1,21 @@
 {
-  "_note": "Global default policy. Applies when no model/manufacturer rule matches.",
+  "_note": "Publish to GitHub (see AutopilotReset.config.xml Control.ResetControlUrl). Keys starting with _ are ignored by the script.",
+
   "enableReset": true,
-  "lastUpdated": "2026-04-26",
-  "reason": "Reset is enabled for all devices.",
+  "lastUpdated": "2026-05-20",
+  "reason": "Reset is enabled for all devices unless a rule or exemption applies.",
 
   "rules": {
-    "_note": "Precedence: models > manufacturers > global",
+    "_note": "Reset (I Agree / reboot) precedence: serials > models > manufacturers > global enableReset.",
+
+    "serials": {
+      "_note": "Case-insensitive match on Win32_BIOS.SerialNumber (spaces stripped).",
+
+      "EXAMPLE-SERIAL-001": {
+        "enableReset": false,
+        "reason": "Example: block reset for this serial (pilot or hold)."
+      }
+    },
 
     "manufacturers": {
       "_note": "Case-insensitive exact match on Win32_ComputerSystem.Manufacturer",
@@ -30,6 +40,37 @@
       "21MDS0R20H": {
         "enableReset": true,
         "reason": "This specific model is allowed to reset."
+      }
+    }
+  },
+
+  "exemptions": {
+    "_note": "If any entry matches with suppressNotification true, migration toast is not shown (fail-open if GitHub unreachable). ForceShow desktop shortcut bypasses exemption.",
+
+    "devices": {
+      "_note": "Match on COMPUTERNAME (case-insensitive, spaces stripped).",
+
+      "EXAMPLE-PC-01": {
+        "suppressNotification": true,
+        "reason": "Example: retiree device — do not prompt for migration."
+      }
+    },
+
+    "users": {
+      "_note": "Match on resolved user email (Outlook profile / UPN). Use full UPN, uppercase match.",
+
+      "user.name@grundfos.com": {
+        "suppressNotification": true,
+        "reason": "Example: approved late migration — no toast until removed from list."
+      }
+    },
+
+    "serials": {
+      "_note": "Same serial normalization as rules.serials.",
+
+      "EXAMPLE-SERIAL-002": {
+        "suppressNotification": true,
+        "reason": "Example: loaner hardware — keep off migration prompts."
       }
     }
   }
